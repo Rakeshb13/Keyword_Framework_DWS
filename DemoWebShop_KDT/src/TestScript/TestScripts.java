@@ -10,10 +10,15 @@ public class TestScripts {
 
 	public static void main(String[] args) throws EncryptedDocumentException, IOException, InterruptedException {
 
+		//Step 1: To get the Test Cases Name
 		ArrayList<String> sheetNames = ExcelDataReader.getTestCaseName();
 		for (String sheetName : sheetNames) {
+			
+		//Step 2: To get the Keywords from the Test Cases
 			ArrayList<String> keywords = ExcelDataReader.getKeywords(sheetName);
 			int cellNumber = 1;
+			
+		//Step 3: Performing Actions based on the keywords	
 			for (String keyword : keywords) {
 				TestKeywords tk = new TestKeywords();
 				switch (keyword) {

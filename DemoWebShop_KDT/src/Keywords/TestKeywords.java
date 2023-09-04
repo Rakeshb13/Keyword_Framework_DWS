@@ -11,7 +11,7 @@ public class TestKeywords {
 
 	public void launchBrowser() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\\\Users\\\\raki9\\\\OneDrive\\\\Documents\\\\SeleniumWeekendbatch\\\\chromedriver-win64\\\\chromedriver-win64\\\\chromedriver.exe");
+				"C:\\Users\\raki9\\OneDrive\\Documents\\SeleniumWeekendbatch\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
