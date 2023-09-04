@@ -12,7 +12,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 public class ExcelDataReader {
 
 	public static ArrayList<String> getTestCaseName() throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("D:\\DWS KDT (automation)\\TestCases.xlsx");
+		FileInputStream fis = new FileInputStream("./TestData/TestCases.xlsx");
 		Workbook book = WorkbookFactory.create(fis);
 		Sheet sh = book.getSheet("TestCases");
 		int lastRow = sh.getPhysicalNumberOfRows();
@@ -24,7 +24,7 @@ public class ExcelDataReader {
 	}
 
 	public static ArrayList<String> getKeywords(String sheetName) throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("D:\\DWS KDT (automation)\\TestCases.xlsx");
+		FileInputStream fis = new FileInputStream("./TestData/TestCases.xlsx");
 		Workbook book = WorkbookFactory.create(fis);
 		Sheet sh = book.getSheet(sheetName);
 		int lastRow = sh.getPhysicalNumberOfRows();
@@ -36,7 +36,7 @@ public class ExcelDataReader {
 	}
 
 	public static String getTestData(String sheetName, int rowNum) throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("D:\\DWS KDT (automation)\\TestCases.xlsx");
+		FileInputStream fis = new FileInputStream("./TestData/TestCases.xlsx");
 		Workbook book = WorkbookFactory.create(fis);
 		Sheet sh = book.getSheet(sheetName);
 		return sh.getRow(rowNum).getCell(5).toString();
@@ -44,7 +44,7 @@ public class ExcelDataReader {
 
 	public static String getXpathOfWebElement(String sheetName, int rowNum)
 			throws EncryptedDocumentException, IOException {
-		FileInputStream fis = new FileInputStream("D:\\DWS KDT (automation)\\TestCases.xlsx");
+		FileInputStream fis = new FileInputStream("./TestData/TestCases.xlsx");
 		Workbook book = WorkbookFactory.create(fis);
 		Sheet sh = book.getSheet(sheetName);
 		return sh.getRow(rowNum).getCell(7).toString();
